@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Project 148</title>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"> </script>
+</head>
+<body>
+   
+ <a-scene>
+    <!--LOAD THE GLTF IMAGES-->
+    <a-assets>
+        <a-asset-item id="img1" src="scene.gltf"></a-asset-item>
+        <a-asset-item id="img2" src="scene(1).gltf"></a-asset-item>
+        <a-asset-item id="img3" src="scene(2).gltf"></a-asset-item>
+        <a-asset-item id="img4" src="scene(3).gltf"></a-asset-item>
+        <a-asset-item id="street" src="street.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-sky color="#2a281e"></a-sky>
+
+    <a-box
+    id="background-scene"
+    src="https://raw.githubusercontent.com/whitehatjr/PRO-VR-C148/main/assets/background.jpg"
+    position="0 12.48 -3.5"
+    width="30"
+    height="25"
+    >
+    </a-box>
+    
+    <a-entity shadow="receive:true;">
+        <a-entity
+          scale="0.02 0.04 0.03"
+          gltf-model="#street"
+          position="0 0 -1"
+          rotation="0 90 0"
+        ></a-entity>
+
+        <a-entity
+          scale="0.02 0.04 0.03"
+          gltf-model="#street"
+          position="0 0 3"
+          rotation="0 90 0"
+        ></a-entity>
+    </a-entity>
+
+    <a-entity
+        scale="1.5 1.5 1.5"
+        position="0 0 3"
+        gltf-model="#img1"
+        shadow="cast:true;"
+    ></a-entity>
+
+    <a-camera look-controls-enabled wasd-controls-enabled position="0 5 15">
+    </a-camera>
+    <a-entity
+        light="type: point; castShadow: true; color: #e6ca14; intensity: 2.35"
+        position="-5.92951 8.39487 1.29438"
+    >
+    </a-entity>
+    <a-entity light="type: ambient;"> </a-entity>
+    
+    
+ </a-scene>
+    
+
+</body>
+</html>
